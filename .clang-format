@@ -1,14 +1,22 @@
 ---
 Language:       C
+//This determines what formatting style will be used
 # BasedOnStyle: LLVM
 AccessModifierOffset: -2
+//arguments that need more than one line will be alligned together
 AlignAfterOpenBracket: Align
 AlignConsecutiveMacros: false
-AlignConsecutiveAssignments: false
-AlignConsecutiveDeclarations: false
-AlignEscapedNewlines: Right
+//variable assignment values will be alligned together
+AlignConsecutiveAssignments: true
+//declaration of variables consecutively will be alligned together
+AlignConsecutiveDeclarations: true
+//new lines will be pushed as far to the left as possible
+AlignEscapedNewlines: Left
+//operands will be alligned together
 AlignOperands:   true
+//trailing comments will be alligned together
 AlignTrailingComments: true
+//when needed, arguments of a function call will go on the next line
 AllowAllArgumentsOnNextLine: true
 AllowAllConstructorInitializersOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
@@ -16,10 +24,12 @@ AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: All
 AllowShortLambdasOnASingleLine: All
+//short if statements will not be allowed on a single line
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakAfterReturnType: None
+//will not attempt to make multiline strings look consistant
 AlwaysBreakBeforeMultilineStrings: false
 AlwaysBreakTemplateDeclarations: MultiLine
 BinPackArguments: true
